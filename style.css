@@ -165,14 +165,18 @@ div.content {
 }
 #article table {
     position: relative;
-    width: 80%;
-    left: 10%;
+    width: 86%;
+    left: 7%;
     margin: 20px 0;
+    padding: 20px;
+    background-color: rgb(195, 212, 243);
+    border-radius: 7px;
 }
 #article table caption{
     width: 100%;
     text-align: center;
     color: rgb(0, 155, 0);
+    margin-bottom: 10px;
 }
 
 #dayfact {
