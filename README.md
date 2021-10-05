@@ -1,1 +1,1 @@
-This is a first web laboratory work fo a first module.
+This is a first web laboratory work for a first module.
