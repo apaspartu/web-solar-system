@@ -41,7 +41,7 @@ header nav a {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
     padding: 0 10px;
-    transition: font-size 0.3s ease;
+    transition: all 0.3s ease;
 }
 header nav a:hover {
     color: rgb(96, 99, 255);
@@ -88,7 +88,7 @@ header nav a:active {
     background-color: rgb(138, 95, 255);
     border: 3px solid rgb(138, 95, 255);
     border-radius: 8px;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
 }
 #search button:hover {
     background-color: rgb(162, 148, 255);}
@@ -146,15 +146,22 @@ div.content {
 }
 
 #chapnav {
+    display: flex;
+    flex-direction: column;
     margin: 15px 15px;
     top: 10cm;
-    width: 18%;
+    width: 17%;
     height: fit-content;
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(245, 245, 245);
     border: 4px solid rgb(255, 166, 1);
     border-radius: 15px;
     box-shadow: 0 0 10px 5px rgb(212, 212, 212);
     padding: 20px 20px;
+
+    font-size: 13pt;
+    list-style-type: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 #chapnav h3 {
     text-align: center;
@@ -163,48 +170,46 @@ div.content {
     color: rgb(255, 131, 59);
     margin-bottom: 20px;
 }
-#chapnav ul {
-    font-size: 13pt;
-    list-style-type: none;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-#chapnav li {
-    display: flex;
-    align-items: center;
+#chapnav a {
     padding: 10px 10px;
     margin: 5px 0;
-    margin-right: 0;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(226, 226, 226);
     border-radius: 5px;
-}
-#chapnav li img {
-    width: auto;
-    height: 40px;
-}
-
-#chapnav li a {
-    text-indent: 20px;
+    transition: all 0.3s ease;
+    height: 35px;
+    color: rgb(126, 79, 255);
     text-decoration: none;
-    color: rgb(117, 79, 224);
+}
+#chapnav a.plain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chim {
+    width: 40px;
+    height: auto;
+    margin-right: 20px;
 }
 
-#chapnav li:hover {
-    background-color: rgb(114, 175, 245);
+#chapnav a.plnt {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 30px;
 }
-#chapnav li:active {
-    background-color: rgb(68, 106, 209);
-}
-#chapnav ul ul {
-    font-size: 13pt;
-    text-align: left;
-    margin-left: 20px;
-}
+
+#chapnav a:hover {
+    background-color: rgb(167, 175, 255);
+    font-size: 14pt;}
+#chapnav a:active {
+    background-color: rgb(147, 129, 255);
+    font-size: 14pt;}
 
 #article {
     position: relative;
     margin: 15px 15px;
     height: fit-content;
-    width: 48%;
+    width: 49%;
     top: 40px;
     margin-bottom: 2cm;
     background-color: rgb(251, 251, 251);
