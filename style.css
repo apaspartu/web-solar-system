@@ -12,15 +12,15 @@ header {
     align-items: center;
     top: 0;
     width: 100%;
-    height: 70px;
+    height: 60px;
     background-color: rgb(255, 255, 255);
-    border-bottom: 5px solid rgb(131, 109, 255);
-    box-shadow: 0 0px 15px 3px rgb(63, 63, 63);
+    border-bottom: 4px solid rgb(146, 128, 247);
+    box-shadow: 0 0px 6px 1px rgb(104, 104, 104);
     z-index: 2;
 }
 header h1 {
     margin-left: 60px;
-    font-size: xx-large;
+    font-size: 20pt;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(121, 72, 255);
 }
@@ -36,7 +36,7 @@ header nav a {
     align-items: center;
 
     color: rgb(49, 49, 49);
-    font-size: 14pt;
+    font-size: 13pt;
     font-weight: 500;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
@@ -45,15 +45,15 @@ header nav a {
 }
 header nav a:hover {
     color: rgb(96, 99, 255);
-    font-size: 15pt;}
+    font-size: 14pt;}
 header nav a:active {
     color: rgb(15, 18, 160);
-    font-size: 15pt;}
+    font-size: 14pt;}
 
 #wblogo {
     position: relative;
     width: auto;
-    height: 1.5cm;
+    height: 80%;
     left: 2%;
 }
 
@@ -65,9 +65,9 @@ header nav a:active {
 }
 
 #search input {
-    height: 40px;
+    height: 38px;
     font-family:  Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 13pt;
+    font-size: 12.5pt;
     color: royalblue;
     border: 3px solid rgb(138, 95, 255);
     border-radius: 8px;
@@ -83,7 +83,7 @@ header nav a:active {
 
 #search button {
     width: 60px;
-    height: 40px;
+    height: 38px;
     margin-left: -12px;
     background-color: rgb(138, 95, 255);
     border: 3px solid rgb(138, 95, 255);
@@ -111,17 +111,17 @@ header nav a:active {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-bottom: 6px solid rgb(109, 109, 255);
-    z-index: -1;
+    border-bottom: 5px solid rgb(109, 109, 255);
+    z-index: 1;
 }
 
-div.content {
+.content {
     display: flex;
     width: 100%;
-    padding: 20px 0;
     height: fit-content;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(250, 250, 250);
     z-index: -1;
+    padding-bottom: 20px;
 }
 
 #quote {
@@ -132,52 +132,63 @@ div.content {
     left: 22.5%;
     width: 47%;
     height: fit-content;
-    background-color: rgb(248, 248, 248);
-    border: 5px solid rgb(109, 109, 255);
+    background-color: rgb(250, 250, 250);
+    border: 4px solid rgb(146, 146, 250);
     border-radius: 12px;
-    box-shadow: 0 0 0px 0px rgb(114, 114, 114);
     text-align: center;
+    z-index: 1;
 }
+#quote h4 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    bottom: 10px;
+    font-size: 14pt;
+    color: rgb(120, 127, 226);
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    border: 4px solid rgb(132, 139, 236);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
 #quote q {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15pt;
-    color: rgb(51, 70, 88);
+    color: rgb(62, 89, 207);
 }
 
 #chapnav {
     display: flex;
     flex-direction: column;
-    margin: 15px 15px;
-    top: 10cm;
+    margin-right: 5px;
+    margin-left: 0;
+    margin-top: 10px;
     width: 17%;
     height: fit-content;
-    background-color: rgb(245, 245, 245);
-    border: 4px solid rgb(255, 166, 1);
-    border-radius: 15px;
-    box-shadow: 0 0 10px 5px rgb(212, 212, 212);
-    padding: 20px 20px;
+    background-color: rgba(245, 245, 245, 0.0);
+    border: 0px solid rgb(109, 109, 255);
+    border-left: none;
+    border-top: none;
+    padding: 20px 10px;
 
-    font-size: 13pt;
+    font-size: 17px;
     list-style-type: none;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
-#chapnav h3 {
-    text-align: center;
-    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 17pt;
-    color: rgb(255, 131, 59);
-    margin-bottom: 20px;
-}
 #chapnav a {
     padding: 10px 10px;
-    margin: 5px 0;
-    background-color: rgb(226, 226, 226);
+    margin: 3px 0;
+    background-color: rgb(209, 221, 241);
     border-radius: 5px;
     transition: all 0.3s ease;
-    height: 35px;
-    color: rgb(126, 79, 255);
+    height: 30px;
+    color: rgb(114, 67, 243);
     text-decoration: none;
 }
 #chapnav a.plain {
@@ -186,9 +197,12 @@ div.content {
     justify-content: center;
 }
 .chim {
-    width: 40px;
-    height: auto;
-    margin-right: 20px;
+    position: relative;
+    left: -55px;
+    width: auto;
+    height: 50px;
+    border: 6px solid rgb(245, 245, 245);
+    border-radius: 50%;
 }
 
 #chapnav a.plnt {
@@ -196,36 +210,41 @@ div.content {
     align-items: center;
     justify-content: left;
     padding-left: 30px;
+    margin-left: 20px;
 }
 
 #chapnav a:hover {
     background-color: rgb(167, 175, 255);
-    font-size: 14pt;}
+    font-size: 18px;}
 #chapnav a:active {
     background-color: rgb(147, 129, 255);
-    font-size: 14pt;}
+    font-size: 18px;}
 
 #article {
     position: relative;
     margin: 15px 15px;
     height: fit-content;
-    width: 49%;
-    top: 40px;
+    width: 53%;
+    top: 60px;
     margin-bottom: 2cm;
-    background-color: rgb(251, 251, 251);
-    border: 0px solid rgb(45, 182, 68);
-    box-shadow: 0 0 10px 5px rgb(212, 212, 212);
-    border-radius: 20px;
+    background-color: rgb(250, 250, 250);
+    border: 0px solid rgb(196, 196, 196);
+    box-shadow: 0 0 5px 2px rgb(212, 212, 212);
+    border-radius: 5px;
     padding: 30px 30px;
     font-size: 13pt;
     font-family: Arial, sans-serif;
-    text-indent: 50px;
-    text-align: left;
+    text-indent: 40px;
+    text-align: justify;
     line-height: 1.6;
-    color: rgb(26, 26, 26);
+    color: rgb(51, 49, 49);
+    z-index: 1;
+}
+#article p {
+    margin: 10px 0;
 }
 
-#article h2 {
+#article h3 {
     color: rgb(77, 77, 223);
     width: 100%;
     text-align: center;
@@ -235,9 +254,10 @@ div.content {
 
 #article img {
     position: relative;
-    margin: 15px 0;
-    width: 60%;
-    left: 20%;
+    margin: 15px 10px;
+    margin-left: 30px;
+    width: 46%;
+    height: 86%;
     border-radius: 10px;
 }
 #article iframe {
@@ -264,15 +284,16 @@ div.content {
 }
 
 #dayfact {
-    margin: 15px 15px;
-    top: 10cm;
-    width: 18%;
+    display: flex;
+    flex-direction: column;
+    margin: 35px 15px;
+    width: 17%;
     height: fit-content;
     background-color: rgb(248, 248, 248);
-    border: 4px solid rgb(130, 130, 229);
-    box-shadow: 0 0 10px 5px rgb(212, 212, 212);
+    border: 1px solid rgb(219, 219, 219);
+    box-shadow: 0 0 6px 3px rgb(212, 212, 212);
     padding: 20px 20px;
-    font-size: 14pt;
+    font-size: 13pt;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-indent: 30px;
     font-weight: 500;
@@ -287,7 +308,7 @@ div.content {
 }
 
 #dayfact h3 {
-    font-size: 15pt;
+    font-size: 14pt;
     text-indent: 0;
     text-align: center;
     margin-bottom: 10px;
@@ -297,6 +318,21 @@ div.content {
 
 #dayfact b {
     color: rgb(255, 47, 127);
+}
+
+#dayfact button {
+    width: 50%;
+    height: 36px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-left: auto;
+    border: 2px solid rgb(149, 149, 229);
+    border-radius: 4px;
+    background-color: rgb(245, 245, 245);
+    color: rgb(84, 97, 236);
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    font-weight: 550;
 }
 
 #footer {
