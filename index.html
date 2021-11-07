@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
     <head>
         <title>Сонячна система</title>
@@ -30,10 +30,11 @@
 
         <div id="wrapper">
         </div>
-
         <div id="quote">
-            <q>Якщо космос має безмежний запас часу, це не просто означає, що може статися все, що завгодно. Це означає, що все коли-небудь дійсно станеться.</q>
-            <h4>></h4>
+            <q id="quote-text"></q>
+            <h4 onclick="change_quote">></h4>
+            <p id="quote-author"></p>
+            <script>document.querySelector("#quote > h4").addEventListener("mousedown", change_quote);</script>
         </div>
 
         <div class="content">
@@ -132,7 +133,7 @@
                 Марса, Сатурна, Урана й Нептуна. Спостерігати його можна лише раз на 
                 20 років. Найвужчий сектор планети займають один раз на 500 років.</p>            
             
-                <button id="readmore" onclick="myf()">Читати далі...</button>
+                <a href="#" id="readmore"><h4>Читати далі...</h4><div></div></a>
             </div>
         </div>
         <div id="footer">

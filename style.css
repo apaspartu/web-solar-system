@@ -41,7 +41,7 @@ header nav a {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
     padding: 0 10px;
-    transition: all 0.3s ease;
+    transition: color 0.3s, font-size 0.3s ease;
 }
 header nav a:hover {
     color: rgb(96, 99, 255);
@@ -111,7 +111,7 @@ header nav a:active {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-bottom: 5px solid rgb(109, 109, 255);
+    border-bottom: 5px solid rgb(146, 146, 250);
     z-index: 1;
 }
 
@@ -126,12 +126,15 @@ header nav a:active {
 
 #quote {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 15px 15px;
     padding: 25px 36px;
     top: 11cm;
     left: 22.5%;
     width: 47%;
-    height: fit-content;
+    height: 50px;
     background-color: rgb(250, 250, 250);
     border: 4px solid rgb(146, 146, 250);
     border-radius: 12px;
@@ -147,19 +150,56 @@ header nav a:active {
     bottom: 10px;
     font-size: 14pt;
     color: rgb(120, 127, 226);
-    z-index: 2;
     width: 22px;
     height: 22px;
     border: 4px solid rgb(132, 139, 236);
     border-radius: 50%;
     cursor: pointer;
+    
+    transition: transform 0.3s, background-color 0.5s, color 0.5s ease;
+
+    animation-name: arrow_move;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+#quote h4:hover {
+    background-color: rgb(132, 139, 236);
+    color: white;
+}
+#quote h4:active {
+    transform: scale(60%);    
 }
 
+@keyframes arrow_move
+{
+    from {
+        right: 13px;
+    }
+    50% {
+        right: 5px;
+    }
+    to {
+        right: 13px;
+    }
+}
 
-#quote q {
+#quote-text {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15pt;
     color: rgb(62, 89, 207);
+    width: fit-content;
+}
+
+#quote-author {
+    position: absolute;
+    right: 60px;
+    bottom: 6px;
+    color: rgb(28, 175, 40);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    font-weight: 700;
+    width: fit-content;
 }
 
 #chapnav {
@@ -217,8 +257,7 @@ header nav a:active {
     background-color: rgb(167, 175, 255);
     font-size: 18px;}
 #chapnav a:active {
-    background-color: rgb(147, 129, 255);
-    font-size: 18px;}
+    background-color: rgb(147, 129, 255);}
 
 #article {
     position: relative;
@@ -231,7 +270,7 @@ header nav a:active {
     border: 0px solid rgb(196, 196, 196);
     box-shadow: 0 0 5px 2px rgb(212, 212, 212);
     border-radius: 5px;
-    padding: 30px 30px;
+    padding: 30px 40px;
     font-size: 13pt;
     font-family: Arial, sans-serif;
     text-indent: 40px;
@@ -320,19 +359,60 @@ header nav a:active {
     color: rgb(255, 47, 127);
 }
 
-#dayfact button {
+#readmore {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     height: 36px;
-    margin-right: 10px;
+    right: 10px;
     margin-top: 5px;
     margin-left: auto;
     border: 2px solid rgb(149, 149, 229);
     border-radius: 4px;
     background-color: rgb(245, 245, 245);
-    color: rgb(84, 97, 236);
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-size: 12pt;
     font-weight: 550;
+    text-decoration: none;
+}
+
+#readmore h4 {
+    width: 100%;
+    text-indent: 0%;
+    text-align: center;
+    color: rgb(81, 94, 240);
+    transition: color 0.4s ease-out;
+    z-index: 1;
+} 
+
+#readmore div {
+    position: absolute;
+    margin: -1px;
+    border: 1px solid rgb(149, 149, 229);
+    left: 100%;
+    top: 100%;
+    width: 0%;
+    height: 0%;
+    background-color: rgb(149, 149, 229);
+    transition: all 0.4s ease-out;
+    visibility: hidden;
+    z-index: 0;
+}
+
+#readmore:hover div {
+    visibility: visible;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+#readmore:hover h4 {
+    color: white;
+}
+#readmore:active div{
+    background-color: rgb(81, 81, 212);
 }
 
 #footer {
