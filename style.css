@@ -439,4 +439,96 @@ header nav a:active {
 
 #f1 {left: 6%;}
 #f2 {left: 35%;}
-#f3 {left: 67%}; 
+#f3 {left: 67%;} 
+
+#load_screen {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 3;
+
+    transition: overflow 0.3s linear;
+
+    transition: left 0.8s ease-out;
+    animation: load_hide;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+@keyframes load_hide {
+    from {
+        background-color: rgba(0, 0, 0, 0.95);
+        opacity: 1;
+    }
+    10% { 
+        background-color: rgb(252, 252, 252, 0.9);
+        top: 0;
+        visibility: visible;
+    }
+    to {
+        top: 100%;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+}
+
+#load_screen > img {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(31, 30, 30);
+    opacity: 0;
+
+    animation: plnt_load;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes plnt_load {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    } 
+}
+
+#load_screen > #sun {
+    width: 96px;
+    height: 88px;
+    border: none;
+    border-radius: 0;
+}
+#load_screen > #sat {
+    border: none;
+    border-radius: 0;
+    width: 104px;
+    height: auto;
+}
+#load_screen > #mer {
+    width: 40px;
+    height: 40px;
+}
+#load_screen > #ven {
+    width: 50px;
+    height: 50px;
+}
+#load_screen > #ear {
+    width: 55px;
+    height: 55px;
+}
+#load_screen > #jup {
+    width: 65px;
+    height: 65px;
+}
+
